@@ -1,0 +1,18 @@
+<form {{action "save" on="submit"}}>
+  <h3>{{errorMessage}}</h3>
+  <fieldset>
+    {{input class="stack" value=model.name placeholder="Name"}}
+    {{input class="stack" value=model.secretIdentity placeholder="Secret Identity"}}
+    {{#x-select class="stack" value=model.category}}
+      {{#x-option}}Choose a Category{{/x-option}}
+      {{#each superCategories as |category|}}
+        {{#x-option value=category}}{{category.name}}{{/x-option}}
+      {{/each}}
+    {{/x-select}}
+    {{input class="stack" value=model.gender placeholder="Gender"}}
+    {{input class="stack" value=model.baseOfOperations placeholder="Base of Operations"}}
+    {{textarea value=model.description placeholder="Description"}}
+    <input type="submit" value="Save" class="primary">
+    <button {{action "cancel"}}>Cancel</button>
+  </fieldset>
+</form>

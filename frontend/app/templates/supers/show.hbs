@@ -1,0 +1,31 @@
+<p>{{link-to 'Back to Codex' 'supers.index'}} </p>
+<h1>{{model.name}}</h1>
+<p>{{link-to 'Edit this Super' 'supers.edit' model}}</p>
+<div class="row demo">
+  <div></div>
+  <div class="card friend-profile">
+    <table>
+      <tr>
+        <th align="left">Secret Identity</th>
+        <td>{{model.secretIdentity}}</td>
+      </tr>
+      <tr>
+        <th align="left">Category</th>
+        <td>{{model.category.name}}</td>
+      </tr>
+      <tr>
+        <th align="left">Gender</th>
+        <td>{{model.gender}}</td>
+      </tr>
+      <tr>
+        <th align="left">Base of Operations</th>
+        <td>{{model.baseOfOperations}}</td>
+      </tr>
+      <tr>
+        <th align="left">Description</th>
+        <td>{{model.description}}</td>
+      </tr>
+    </table>
+  </div>
+  <div></div>
+</div>

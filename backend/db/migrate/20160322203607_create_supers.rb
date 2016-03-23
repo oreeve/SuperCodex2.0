@@ -6,6 +6,7 @@ class CreateSupers < ActiveRecord::Migration
       t.string :gender
       t.string :base_of_operations
       t.text :description, null: false
+      t.belongs_to :category, null: false
 
       t.timestamps null: false
     end

@@ -1,0 +1,25 @@
+<h1>All Supers</h1>
+<h3>Total Supers: {{model.length}}</h3>
+{{link-to 'Add to the Codex' 'supers.new'}}
+<div class="row demo">
+  <div></div>
+  <div>
+<table class="primary">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |super|}}
+    <tr>
+      <td>{{link-to super.name 'supers.show' super}}</td>
+      <td><a href="#" {{action "delete" super}}>Delete</a></td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+</div>
+<div></div>
+</div>
